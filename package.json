@@ -6,13 +6,16 @@
     "dev": "bun run --watch src/index.ts"
   },
   "dependencies": {
-    "@prisma/composer": "0.10.0-dev.3",
-    "@prisma/composer-prisma-cloud": "0.10.0-dev.3",
+    "@prisma/composer": "https://pkg.pr.new/prisma/composer/@prisma/composer@419ed907.tgz",
+    "@prisma/composer-prisma-cloud": "https://pkg.pr.new/prisma/composer/@prisma/composer-prisma-cloud@419ed907.tgz",
     "elysia": "latest"
   },
   "devDependencies": {
-    "@prisma/composer-cli": "0.10.0-dev.3",
+    "@prisma/composer-cli": "https://pkg.pr.new/prisma/composer/@prisma/composer-cli@419ed907.tgz",
     "bun-types": "latest"
   },
-  "module": "src/index.js"
+  "module": "src/index.js",
+  "overrides": {
+    "effect": "4.0.0-beta.103"
+  }
 }
