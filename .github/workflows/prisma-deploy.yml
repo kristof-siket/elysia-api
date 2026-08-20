@@ -24,9 +24,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - uses: prisma/cloud-deploy-action@v1
+      - uses: prisma/cloud-deploy-action@3dfd6353145db816c94c0ad0f23bd2506597834b
         with:
-          build-command: bun run build
+          module: module.mjs
+          build-command: none
 
   teardown:
     # Branch deletions only: tag deletions must never trigger a destroy.
@@ -38,7 +39,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - uses: prisma/cloud-deploy-action@v1
+      - uses: prisma/cloud-deploy-action@3dfd6353145db816c94c0ad0f23bd2506597834b
         with:
+          module: module.mjs
           mode: destroy
           stage: ${{ github.event.ref }}
