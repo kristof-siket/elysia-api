@@ -1,0 +1,4 @@
+[install]
+# Hoisted linker is required: the isolated default hides the alchemy bin and
+# puts symlinks into Next standalone output, which the packager rejects.
+linker = "hoisted"
